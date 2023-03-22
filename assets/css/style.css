@@ -336,8 +336,23 @@ header {
 
 /* ================= media queries =================*/
 
-.projects{
+.recent-projects{
+    margin: 0 200px;
+    padding-top: 3rem;
+}
+.card-project{
     display: flex;
-    justify-content: center;
     gap: 30px;
+    padding-top: 2rem;
+}
+
+@media (max-width: 600px){
+
+    .card-project{
+        flex-direction: column;
+    }
+    
+    .recent-projects{
+        margin: 0 100px;
+    }
 }
