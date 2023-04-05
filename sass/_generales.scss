@@ -1,0 +1,149 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $body-fonts;
+}
+
+body {
+  font-size: $normal-font-size;
+  color: $text-color;
+  background-color: $body-color;
+  height: 100vh;
+}
+
+p {
+  padding: 1.5rem 0 2.5rem 0;
+  width: 75%;
+}
+
+/* ================= body style =================*/
+h1, h2, h3, h4 {
+  color: $title-color;
+  font-weight: var(--font-semi-bold);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #1F140D;
+}
+
+/* ================= header =================*/
+header {
+  position: relative;
+}
+
+.navbar {
+  background-color: var(--bg-nav);
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: end;
+}
+
+/* ================= Hero =================*/
+.hire_btn {
+  width: 120px;
+  color: var(--text-color);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: #582f0e solid 2px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.hire_btn:hover {
+  scale: 1.05;
+}
+
+.hire_btn:active {
+  scale: 0.95;
+  background-color: var(--call-color-hover);
+}
+
+.hero {
+  height: 92vh;
+  margin: 0 200px;
+  display: flex;
+  align-items: center;
+}
+
+.me_profile {
+  height: 350px;
+}
+
+.social_links {
+  display: flex;
+  justify-content: center;
+}
+
+.social_links a {
+  color: var(--fc-nav);
+  font-size: 1.85rem;
+  padding-right: 1rem;
+}
+
+.btn_info {
+  display: flex;
+  gap: 2rem;
+}
+
+.hire_btn {
+  width: 120px;
+  color: var(--text-color);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: #582f0e solid 2px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.hire_btn:hover {
+  scale: 1.05;
+}
+
+.hire_btn:active {
+  scale: 0.95;
+  background-color: var(--call-color-hover);
+}
+
+/* ================= about =================*/
+/* ================= media queries =================*/
+.recent-projects {
+  margin: 0 200px;
+  padding-top: 3rem;
+}
+
+.card-project {
+  display: flex;
+  gap: 30px;
+  padding-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .card-project {
+    flex-direction: column;
+  }
+  .recent-projects {
+    margin: 0 100px;
+  }
+}/*# sourceMappingURL=sass.css.map */
