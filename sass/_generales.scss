@@ -220,3 +220,69 @@ header {
     }
   }
 }
+
+//projects//
+.portfolio{
+	text-align: center;
+
+  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap : 1.5rem;
+    margin-bottom: 2rem;
+
+    .box{
+      height: 30rem;
+      overflow: hidden;
+      position: relative;
+
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .content{
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%;
+        width: 100%;
+        background: $call-color;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: 0.2s linear;
+
+        h3{
+          color: #fff;
+          font-size: $h3-font-size;
+          font-weight: $font-medium;
+          text-transform: uppercase;
+        }
+
+        p{
+          color: $text-color-light;
+          line-height: 2;
+          font-size: $normal-font-size;
+          padding: 1rem 0;
+        }
+
+        a{
+          font-size: 2rem;
+          color: $input-color;
+
+          &:hover{
+            color: $fc-nav-hover;
+          }
+        }
+      }
+
+      &:hover .content{
+        transform: translateY(0%);
+      }
+    }
+  }
+}
