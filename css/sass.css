@@ -47,12 +47,10 @@ a {
 header {
   position: relative;
 }
-
-.navbar {
+header .navbar {
   background-color: var(--bg-nav);
 }
-
-.navbar-nav {
+header .navbar .navbar-nav {
   display: flex;
   justify-content: end;
 }
@@ -70,11 +68,9 @@ header {
   cursor: pointer;
   transition: scale 0.2s ease;
 }
-
 .hire_btn:hover {
   scale: 1.05;
 }
-
 .hire_btn:active {
   scale: 0.95;
   background-color: var(--call-color-hover);
@@ -86,28 +82,23 @@ header {
   display: flex;
   align-items: center;
 }
-
-.me_profile {
+.hero .profile .me_profile {
   height: 350px;
 }
-
-.social_links {
+.hero .profile .social_links {
   display: flex;
   justify-content: center;
 }
-
-.social_links a {
+.hero .profile .social_links a {
   color: var(--fc-nav);
   font-size: 1.85rem;
   padding-right: 1rem;
 }
-
-.btn_info {
+.hero .info .btn_info {
   display: flex;
   gap: 2rem;
 }
-
-.hire_btn {
+.hero .info .btn_info .hire_btn {
   width: 120px;
   color: var(--text-color);
   text-align: center;
@@ -119,12 +110,10 @@ header {
   cursor: pointer;
   transition: scale 0.2s ease;
 }
-
-.hire_btn:hover {
+.hero .info .btn_info .hire_btn:hover {
   scale: 1.05;
 }
-
-.hire_btn:active {
+.hero .info .btn_info .hire_btn:active {
   scale: 0.95;
   background-color: var(--call-color-hover);
 }
@@ -149,4 +138,4 @@ header {
   .recent-projects {
     margin: 0 100px;
   }
-} /*# sourceMappingURL=sass.css.map */
+}/*# sourceMappingURL=sass.css.map */
