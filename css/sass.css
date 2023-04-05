@@ -48,17 +48,50 @@ header {
   position: relative;
 }
 header .navbar {
-  background-color: var(--bg-nav);
+  background-color: #e4cfaf;
+}
+header .navbar .navbar-brand {
+  font-weight: 600;
 }
 header .navbar .navbar-nav {
   display: flex;
   justify-content: end;
 }
+header .navbar .navbar-nav .nav-item {
+  font-weight: 500;
+  border-right: 10px #7e5b3d;
+}
+header .navbar .navbar-nav .nav-item:hover {
+  background-color: #774318;
+}
+header .navbar .navbar-nav .nav-item a {
+  color: #432818;
+}
+header .navbar .navbar-nav .nav-item a:hover {
+  color: #FFF4AC;
+}
+header .btn {
+  width: 120px;
+  color: #1F140D;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: #582f0e solid 2px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+header .btn:hover {
+  scale: 1.05;
+  background-color: #582f0e;
+  border: #582f0e;
+}
 
 /* ================= Hero =================*/
 .hire_btn {
   width: 120px;
-  color: var(--text-color);
+  color: #1F140D;
   text-align: center;
   padding: 0.5rem 1rem;
   border: #582f0e solid 2px;
@@ -78,7 +111,7 @@ header .navbar .navbar-nav {
 
 .hero {
   height: 92vh;
-  margin: 0 200px;
+  margin: 0 150px 0 150px;
   display: flex;
   align-items: center;
 }
@@ -92,13 +125,13 @@ header .navbar .navbar-nav {
 .hero .profile .social_links a {
   color: var(--fc-nav);
   font-size: 1.85rem;
-  padding-right: 1rem;
+  padding: 0.5rem;
 }
 .hero .info .btn_info {
   display: flex;
   gap: 2rem;
 }
-.hero .info .btn_info .hire_btn {
+.hero .info .btn_info a {
   width: 120px;
   color: var(--text-color);
   text-align: center;
@@ -110,10 +143,10 @@ header .navbar .navbar-nav {
   cursor: pointer;
   transition: scale 0.2s ease;
 }
-.hero .info .btn_info .hire_btn:hover {
+.hero .info .btn_info a:hover {
   scale: 1.05;
 }
-.hero .info .btn_info .hire_btn:active {
+.hero .info .btn_info a:active {
   scale: 0.95;
   background-color: var(--call-color-hover);
 }
@@ -132,10 +165,24 @@ header .navbar .navbar-nav {
 }
 
 @media (max-width: 600px) {
-  .card-project {
+  .hero {
+    display: grid;
+    margin: 0 80px 0 80px;
+    text-align: center;
+  }
+  .hero .profile .social_links {
+    justify-content: center;
+  }
+  .hero .info p {
+    width: 100%;
+  }
+  .hero .info .btn_info {
+    justify-content: center;
+  }
+  .hero .card-project {
     flex-direction: column;
   }
-  .recent-projects {
+  .hero .recent-projects {
     margin: 0 100px;
   }
 }/*# sourceMappingURL=sass.css.map */
