@@ -190,41 +190,17 @@ header {
   padding-top: 2rem;
 }
 
-@media (max-width: 600px) {
-    .hero{
-      display: grid;
-      margin: 0 80px 0 80px;
-      text-align: center;
 
-    .profile{
-      .social_links{
-        justify-content: center;
-      }
-    }
-
-      .info{
-        p{
-        width: 100%;
-      }
-        .btn_info{
-          justify-content: center;
-        }
-    }
-
-
-    .card-project {
-      flex-direction: column;
-    }
-    .recent-projects {
-      margin: 0 100px;
-    }
-  }
-}
 
 //projects//
 .portfolio{
 	text-align: center;
+  margin: 50px 80px 0 80px;
 
+  h2{
+    margin: 2rem;
+    font-weight: $font-semi-bold;
+  }
   .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
@@ -285,4 +261,39 @@ header {
       }
     }
   }
+}
+
+@media (max-width: 600px) {
+  .hero{
+    display: grid;
+    margin: 0 80px 0 80px;
+    text-align: center;
+
+  .profile{
+    .social_links{
+      justify-content: center;
+    }
+  }
+
+    .info{
+      p{
+      width: 100%;
+    }
+      .btn_info{
+        justify-content: center;
+      }
+  }
+
+
+  .card-project {
+    flex-direction: column;
+  }
+  .recent-projects {
+    margin: 0 100px;
+  }
+}
+
+.portfolio{
+  margin: 25px 0 0 0;
+}
 }
