@@ -72,6 +72,7 @@ a:active {
 /* ================= header =================*/
 header {
   position: relative;
+  height: 100px;
 }
 header .navbar {
   background-color: #e4cfaf;
@@ -130,10 +131,12 @@ header .btn:hover {
 }
 
 .hero {
-  height: 92vh;
+  min-height: calc(100vh - 100px);
   margin: 0 150px 0 150px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 .hero .profile .me_profile {
   height: 350px;
@@ -265,10 +268,13 @@ header .btn:hover {
 }
 .site-footer {
   background-color: #311a06;
+  height: 65vh;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
-  color: #efcab3;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  width: 100%;
 }
 
 .site-footer p {
@@ -382,5 +388,17 @@ header .btn:hover {
     display: grid;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }/*# sourceMappingURL=sass.css.map */

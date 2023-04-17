@@ -72,6 +72,7 @@ a {
 /* ================= header =================*/
 header {
   position: relative;
+  height: 100px;
 
   .navbar {
     background-color: $bg-nav;
@@ -144,10 +145,12 @@ header {
 
 
 .hero {
-  height: 92vh;
+  min-height: calc(100vh - 100px);
   margin: 0 150px 0 150px ;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 
   .profile{
     .me_profile {
@@ -312,10 +315,13 @@ header {
 
 .site-footer{
   background-color:#311a06;
+  height: 65vh;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:$text-font-color-light;
+  margin-top:50px;
+  margin-bottom: 0px;
+  width: 100%;
 }
 
 .site-footer p{
@@ -433,3 +439,14 @@ header {
 }
 
 //projects
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
