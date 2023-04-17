@@ -20,17 +20,36 @@ body {
 
 p {
   padding: 1.5rem 0 2.5rem 0;
-  width: 75%;
+  font-size: 0.938rem;
+  color: #1F140D;
+  font-weight: 500;
 }
 
 /* ================= body style =================*/
-h1, h2, h3, h4 {
+h1 {
+  font-size: 2rem;
   color: #432818;
-  font-weight: var(--font-semi-bold);
+  margin: 5px 0 20px 0;
 }
 
-h1 {
-  font-size: var(--h1-font-size);
+h2 {
+  font-size: 1.75rem;
+  color: #714429;
+  margin: 5px 0 20px 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #af7342;
+  margin: 5px 0 20px 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: #e1a97c;
+  margin: 5px 0 20px 0;
+  margin: 5px 0 20px 0;
+  letter-spacing: 2px;
 }
 
 li {
@@ -40,7 +59,14 @@ li {
 a {
   text-decoration: none;
   font-size: 1rem;
-  color: #1F140D;
+  font-weight: 600;
+  color: #432818;
+}
+a:hover {
+  color: #905f2e;
+}
+a:active {
+  color: #582f0e;
 }
 
 /* ================= header =================*/
@@ -51,24 +77,18 @@ header .navbar {
   background-color: #e4cfaf;
 }
 header .navbar .navbar-brand {
-  font-weight: 600;
+  font-weight: 700;
 }
 header .navbar .navbar-nav {
   display: flex;
   justify-content: end;
 }
 header .navbar .navbar-nav .nav-item {
-  font-weight: 500;
+  font-weight: 600;
   border-right: 10px #7e5b3d;
 }
 header .navbar .navbar-nav .nav-item:hover {
   background-color: #774318;
-}
-header .navbar .navbar-nav .nav-item a {
-  color: #432818;
-}
-header .navbar .navbar-nav .nav-item a:hover {
-  color: #FFF4AC;
 }
 header .btn {
   width: 120px;
@@ -78,7 +98,7 @@ header .btn {
   border: #582f0e solid 2px;
   border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: 600;
   cursor: pointer;
   transition: scale 0.2s ease;
 }
@@ -97,7 +117,7 @@ header .btn:hover {
   border: #582f0e solid 2px;
   border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: 600;
   cursor: pointer;
   transition: scale 0.2s ease;
 }
@@ -131,6 +151,9 @@ header .btn:hover {
   display: flex;
   gap: 2rem;
 }
+.hero .info .btn_info p {
+  width: 75%;
+}
 .hero .info .btn_info a {
   width: 120px;
   color: var(--text-color);
@@ -148,7 +171,7 @@ header .btn:hover {
 }
 .hero .info .btn_info a:active {
   scale: 0.95;
-  background-color: var(--call-color-hover);
+  background-color: #582f0e;
 }
 
 /* ================= about =================*/
@@ -170,7 +193,7 @@ header .btn:hover {
 }
 .portfolio h2 {
   margin: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .portfolio .box-container {
   display: grid;
@@ -195,7 +218,7 @@ header .btn:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #432818;
+  background: #482407;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -204,24 +227,12 @@ header .btn:hover {
   transform: translateY(-100%);
   transition: 0.2s linear;
 }
-.portfolio .box-container .box .content h3 {
-  color: #fff;
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
 .portfolio .box-container .box .content p {
-  color: #efcab3;
   line-height: 2;
-  font-size: 0.938rem;
   padding: 1rem 0;
 }
 .portfolio .box-container .box .content a {
   font-size: 2rem;
-  color: #7e5b3d;
-}
-.portfolio .box-container .box .content a:hover {
-  color: #FFF4AC;
 }
 .portfolio .box-container .box:hover .content {
   transform: translateY(0%);
@@ -253,19 +264,15 @@ header .btn:hover {
   }
 }
 .site-footer {
-  background-color: #432818;
+  background-color: #311a06;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
   color: #efcab3;
 }
 
-.site-footer h4 {
-  color: #FFF4AC;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-top: 5px;
-  letter-spacing: 2px;
+.site-footer p {
+  color: #efcab3;
 }
 
 .footer-links {
@@ -278,12 +285,11 @@ header .btn:hover {
 }
 
 .footer-links a {
-  color: #dbc0a1;
+  color: #fcdcce;
 }
 
 .footer-links a:active, .footer-links a:focus, .footer-links a:hover {
-  color: #FFF4AC;
-  text-decoration: none;
+  color: #905f2e;
 }
 
 .footer-links.inline li {
@@ -356,8 +362,8 @@ header .btn:hover {
 }
 
 .social-icons a:active, .social-icons a:focus, .social-icons a:hover {
-  color: #fff;
-  background-color: #29aafe;
+  color: #905f2e;
+  background-color: #774318;
 }
 
 .social-icons.size-sm a {
@@ -368,12 +374,12 @@ header .btn:hover {
 }
 
 .social-icons a:hover {
-  background-color: #432818;
+  background-color: #e4cfaf;
 }
 
 @media (max-width: 767px) {
   .social-icons li.title {
-    display: block;
+    display: grid;
     margin-right: 0;
     font-weight: 600;
   }

@@ -9,26 +9,45 @@
 }
 
 body {
-  font-size: $normal-font-size;
-  color: $text-color;
+  font-size: $text-font-size;
+  color: $text-font-color;
   background-color: $body-color;
   height: 100vh;
-  
-}
+  }
 
 p {
   padding: 1.5rem 0 2.5rem 0;
-  width: 75%;
+  font-size: $text-font-size;
+  color: $text-font-color;
+  font-weight: $text-weight;
 }
 
 /* ================= body style =================*/
-h1, h2, h3, h4 {
-  color: $title-color;
-  font-weight: var(--font-semi-bold);
-}
 
 h1 {
-  font-size: var(--h1-font-size);
+  font-size:$h1-font-size;
+  color: $h1-font-color;
+  margin: 5px 0 20px 0;
+}
+
+h2{
+  font-size: $h2-font-size;
+  color: $h2-font-color;
+  margin: 5px 0 20px 0;
+}
+
+h3{
+  font-size: $h3-font-size;
+  color: $h3-font-color;
+  margin: 5px 0 20px 0;
+}
+
+h4{
+  font-size: $h4-font-size;
+  color: $h4-font-color;
+  margin: 5px 0 20px 0;
+  margin: 5px 0 20px 0;
+  letter-spacing:2px
 }
 
 li {
@@ -38,7 +57,16 @@ li {
 a {
   text-decoration: none;
   font-size: 1rem;
-  color: #1F140D;
+  font-weight: $font-medium;
+  color: $a-color;
+
+    &:hover{
+      color: $a-color-hover;
+    }
+
+    &:active{
+      color: $a-color-active;
+    }
 }
 
 /* ================= header =================*/
@@ -65,26 +93,19 @@ header {
           background-color: $bg-nav-hover;
         }
 
-        a{
-          color: $fc-nav;
-
-          &:hover{
-            color: $fc-nav-hover;
-          }
-        }
       }
     }
   }
 
   .btn{
     width: 120px;
-    color: $text-color;
+    color: $text-font-color;
     text-align: center;
     padding: 0.5rem 1rem;
     border: #582f0e solid 2px;
     border-radius: 20px;
     font-size: 0.8rem;
-    font-weight: var(--font-semi-bold);
+    font-weight: $font-medium;
     cursor: pointer;
     transition: scale 0.2s ease;
 
@@ -100,13 +121,13 @@ header {
 /* ================= Hero =================*/
 .hire_btn {
   width: 120px;
-  color: $text-color;
+  color: $text-font-color;
   text-align: center;
   padding: 0.5rem 1rem;
   border: #582f0e solid 2px;
   border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: $font-medium;
   cursor: pointer;
   transition: scale 0.2s ease;
 
@@ -150,6 +171,9 @@ header {
       display: flex;
       gap: 2rem;
       
+      p{
+        width: 75%;
+      }
 
       a {
         width: 120px;
@@ -169,7 +193,7 @@ header {
 
         &:active {
           scale: 0.95;
-          background-color: var(--call-color-hover);
+          background-color: $a-color-active;
         }
       }
     }
@@ -223,7 +247,7 @@ header {
         top: 0; left: 0;
         height: 100%;
         width: 100%;
-        background: $call-color;
+        background: #482407;
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -232,27 +256,13 @@ header {
         transform: translateY(-100%);
         transition: 0.2s linear;
 
-        h3{
-          color: #fff;
-          font-size: $h3-font-size;
-          font-weight: $font-medium;
-          text-transform: uppercase;
-        }
-
         p{
-          color: $text-color-light;
           line-height: 2;
-          font-size: $normal-font-size;
           padding: 1rem 0;
         }
 
         a{
           font-size: 2rem;
-          color: $input-color;
-
-          &:hover{
-            color: $fc-nav-hover;
-          }
         }
       }
 
@@ -301,19 +311,15 @@ header {
 // footer // 
 
 .site-footer{
-  background-color:$title-color;
+  background-color:#311a06;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:$text-color-light;
+  color:$text-font-color-light;
 }
 
-.site-footer h4{
-  color:$fc-nav-hover;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
+.site-footer p{
+  color: $text-font-color-light;
 }
 
 .footer-links{
@@ -324,11 +330,10 @@ header {
   display:block
 }
 .footer-links a{
-  color:$body-color
+  color:$a-color-light;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover{
-  color:$fc-nav-hover;
-  text-decoration:none;
+  color:$a-color-hover;
 }
 .footer-links.inline li{
   display:inline-block
@@ -338,19 +343,19 @@ header {
   text-align:right
 }
 .site-footer .social-icons a{
-  color: $call-color;
+  color: $a-color;
   width:40px;
   height:40px;
   line-height:40px;
   margin-left:6px;
   margin-right:0;
   border-radius:18%;
-  background-color:$body-color
+  background-color:$body-color;
 }
-.copyright-text
-{
+.copyright-text{
   margin:0
 }
+
 @media (max-width:991px)
 {
   .site-footer [class^=col-]
@@ -405,26 +410,26 @@ header {
 }
 .social-icons a:active,.social-icons a:focus,.social-icons a:hover
 {
-  color:#fff;
-  background-color:#29aafe
+  color:$a-color-hover;
+  background-color:$bg-nav-hover;
 }
-.social-icons.size-sm a
-{
+.social-icons.size-sm a{
   line-height:34px;
   height:34px;
   width:34px;
   font-size:14px
 }
-.social-icons a:hover
-{
-  background-color:$call-color;
+.social-icons a:hover{
+  background-color:$bg-nav;
 }
 @media (max-width:767px)
 {
   .social-icons li.title
   {
-    display:block;
+    display:grid;
     margin-right:0;
-    font-weight:600
+    font-weight:600;
   }
 }
+
+//projects
