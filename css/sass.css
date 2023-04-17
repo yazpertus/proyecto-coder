@@ -40,7 +40,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  color: #af7342;
+  color: #9b7c63;
   margin: 5px 0 20px 0;
 }
 
@@ -141,14 +141,35 @@ header .btn:hover {
 .hero .profile .me_profile {
   height: 350px;
 }
-.hero .profile .social_links {
-  display: flex;
-  justify-content: center;
+.hero .profile .social_links .social-icons {
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
-.hero .profile .social_links a {
-  color: var(--fc-nav);
-  font-size: 1.85rem;
-  padding: 0.5rem;
+.hero .profile .social_links .social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.hero .profile .social_links .social-icons li a {
+  background-color: #e4cfaf;
+  color: #432818;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 20%;
+  transition: all 0.2s linear;
+}
+.hero .profile .social_links .social-icons li a:hover {
+  background-color: #e4cfaf;
+}
+.hero .profile .social_links .social-icons li a:active, .hero .profile .social_links .social-icons li a:focus, .hero .profile .social_links .social-icons li a:hover {
+  color: #fcdcce;
+  background-color: #774318;
 }
 .hero .info .btn_info {
   display: flex;
@@ -194,10 +215,6 @@ header .btn:hover {
   text-align: center;
   margin: 50px 80px 0 80px;
 }
-.portfolio h2 {
-  margin: 2rem;
-  font-weight: 700;
-}
 .portfolio .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
@@ -231,11 +248,12 @@ header .btn:hover {
   transition: 0.2s linear;
 }
 .portfolio .box-container .box .content p {
-  line-height: 2;
+  color: #efcab3;
   padding: 1rem 0;
 }
 .portfolio .box-container .box .content a {
   font-size: 2rem;
+  color: #fcdcce;
 }
 .portfolio .box-container .box:hover .content {
   transform: translateY(0%);
@@ -307,6 +325,9 @@ header .btn:hover {
 .site-footer .row p {
   color: #efcab3;
 }
+.site-footer .row a {
+  color: #fcdcce;
+}
 .site-footer .row .copyright-text {
   margin: 0;
 }
@@ -330,7 +351,7 @@ header .btn:hover {
   margin-bottom: 4px;
 }
 .site-footer .social-icons li a {
-  background-color: #dbc0a1;
+  background-color: #e4cfaf;
   color: #432818;
   font-size: 16px;
   display: inline-block;
