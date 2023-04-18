@@ -1,0 +1,91 @@
+@media (max-width: 600px) {
+.hero{
+    display: grid;
+    margin: 0 80px 0 80px;
+    text-align: center;
+
+.profile{
+    .social_links{
+    justify-content: center;
+    }
+}
+
+    .info{
+    p{
+    width: 100%;
+    }
+    .btn_info{
+        justify-content: center;
+    }
+}
+
+
+.card-project {
+    flex-direction: column;
+}
+.recent-projects {
+    margin: 0 100px;
+}
+}
+
+.portfolio{
+margin: 25px 0 0 0;
+}
+}
+
+
+
+@media (max-width:991px)
+{
+.site-footer [class^=col-]
+{
+    margin-bottom:30px;
+}
+}
+@media (max-width:600px)
+{
+.site-footer{
+    padding-bottom:0;
+
+    .copyright-text{
+    text-align:center;
+    }
+
+    ul{
+    text-align:center;
+    }
+
+}
+
+}
+
+@media (min-width: 600px) {
+.cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+
+
+@media(max-width: 768px){
+	.skills-container{
+		padding: 30px 8%;
+	}
+}
+@media(max-width: 568px){
+	.skills-container{ 
+    .main-title {
+        h1{
+        font-size: 36px;
+        }
+    }
+
+    .row{
+		flex-direction: column;
+        margin-top: 10px;
+
+            .col:nth-child(2){
+                margin-top: 20px;
+            }
+        }
+    }
+} 
