@@ -401,9 +401,55 @@ header {
 }
 
 
-
 @keyframes animate{
 	100%{
 		width: 100%;
 	}
+}
+
+.education .box-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.education .box-container .box{
+	flex: 1 1 40rem;
+	margin-left: 2rem;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 3.5rem;
+	border-left: .1rem solid #aaa;
+	position: relative;
+}
+.education .box-container .box i{
+	height: 4.5rem;
+	width: 4.5rem;
+	line-height: 4.5rem;
+	font-size: 1.7rem;
+	border-radius: 50%;
+	background: crimson;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	top: -1rem;
+	left: -2.5rem;
+}
+.education .box-container .box span{
+	font-size: 1.7rem;
+	color: #fff;
+	border-radius: 5rem;
+	background: #1a1a1a;
+	padding: .5rem 1.5rem;
+}
+.education .box-container .box h3{
+	font-size: 1.7rem;
+	color: #fff;
+	font-weight: normal;
+	padding-top: 3rem;
+	padding: 1rem 0;
+}
+.education .box-container .box p{
+	font-size: 1.3rem;
+	color: #aaa;
+	line-height: 2;
+	padding-bottom: 1rem;
 }
