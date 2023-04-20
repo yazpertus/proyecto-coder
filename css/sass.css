@@ -30,6 +30,7 @@ h1 {
   font-size: 2rem;
   color: #432818;
   margin: 5px 0 20px 0;
+  font-weight: bolder;
 }
 
 h2 {
@@ -47,7 +48,6 @@ h3 {
 h4 {
   font-size: 1.25rem;
   color: #e1a97c;
-  margin: 5px 0 20px 0;
   margin: 5px 0 20px 0;
   letter-spacing: 2px;
 }
@@ -72,7 +72,6 @@ a:active {
 /* ================= header =================*/
 header {
   position: relative;
-  height: 100px;
 }
 header .navbar {
   background-color: #e4cfaf;
@@ -262,6 +261,78 @@ header .btn:hover {
   gap: 1rem;
 }
 
+.about-me {
+  padding: 80px 0;
+  transition: transform 0.5s ease-in-out;
+}
+.about-me .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.about-me .container .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.about-me .container .grid .grid-item img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.about-me .container .grid .grid-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(75, 37, 9, 0.5);
+}
+.about-me .container .grid .grid-item .btn_info .cv_btn {
+  width: 120px;
+  color: #1F140D;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: #582f0e solid 2px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+.about-me .container .grid .grid-item .btn_info .cv_btn:hover {
+  scale: 1.05;
+  background-color: #582f0e;
+  border: #582f0e;
+  color: #905f2e;
+  font-weight: 600;
+}
+.about-me .container .grid .grid-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: #714429;
+  font-weight: 600;
+}
+.about-me .container .grid .grid-item p {
+  padding: 0 0 1rem 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.about-me .container .grid .grid-item p strong {
+  font-weight: 900;
+  color: #341b07;
+  transition: color 0.3s ease-in-out;
+}
+.about-me .container .grid .grid-item p strong:hover {
+  color: #905f2e;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-item {
+    align-content: center;
+    justify-content: center;
+  }
+}
 .skills-container {
   position: relative;
   width: 100%;
@@ -339,56 +410,127 @@ header .btn:hover {
     width: 100%;
   }
 }
+.education {
+  margin: 2rem 5rem 0 5rem;
+}
+.education h1 {
+  margin-bottom: 5rem;
+}
 .education .box-container {
   display: flex;
   flex-wrap: wrap;
 }
-
 .education .box-container .box {
-  flex: 1 1 40rem;
+  flex: 1 1 30rem;
   margin-left: 2rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 3.5rem;
-  border-left: 0.1rem solid #aaa;
+  padding: 0 4rem 0 3.5rem;
+  border-left: 0.25rem solid #7e5b3d;
   position: relative;
 }
-
 .education .box-container .box i {
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height: 4.5rem;
-  font-size: 1.7rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1rem;
   border-radius: 50%;
-  background: crimson;
-  color: #fff;
+  background: #774318;
+  color: #F3C28B;
   text-align: center;
   position: absolute;
   top: -1rem;
   left: -2.5rem;
 }
-
 .education .box-container .box span {
-  font-size: 1.7rem;
-  color: #fff;
+  font-size: 1em;
+  color: #fbddba;
   border-radius: 5rem;
-  background: #1a1a1a;
+  background: #201507;
   padding: 0.5rem 1.5rem;
 }
-
 .education .box-container .box h3 {
-  font-size: 1.7rem;
-  color: #fff;
-  font-weight: normal;
-  padding-top: 3rem;
-  padding: 1rem 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
-
 .education .box-container .box p {
-  font-size: 1.3rem;
-  color: #aaa;
   line-height: 2;
   padding-bottom: 1rem;
+}
+
+.form {
+  width: 340px;
+  height: 75vh;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+.form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+.form p {
+  padding: 0;
+}
+.form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.form p input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+.form p input:focus {
+  border-bottom: 2px solid #78788c;
+}
+.form button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form button:hover {
+  background: #78788c;
+  color: #fff;
+}
+.form div {
+  content: "Hi";
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  background: #50505a;
+  color: #fff;
+  width: 320px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+}
+.form div span {
+  margin: 0 5px 0 15px;
 }
 
 .site-footer {
