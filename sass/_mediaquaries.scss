@@ -89,3 +89,30 @@ margin: 25px 0 0 0;
         }
     }
 } 
+
+@media only screen and (max-width: 960px) {
+    .case-study {
+    padding: 2rem 0;
+    margin: 0 0 0 3rem ;
+    grid-template-columns: repeat(auto-fit, minmax(2fr , 1fr));
+
+    .description {
+        float: none;
+        margin-left: 0;
+        width: 96%;
+
+        &:last-of-type {
+        margin-bottom: 3rem;
+        }
+
+        p{
+        font-size: 1rem;
+        }
+
+        img{
+        height: 300px;
+        object-fit:cover;
+        }
+    }
+    }  
+}

@@ -545,10 +545,10 @@ header {
 
 .form {
   width: 340px;
-  height: 75vh;
+  height: 80vh;
   background: $bg-nav;
   border-radius: 8px;
-  box-shadow: 0 0 40px -10px #000;
+  box-shadow: 0 0 40px -10px $bg-nav-hover;
   margin: calc(50vh - 220px) auto;
   padding: 20px 30px;
   max-width: calc(100vw - 40px);
@@ -586,7 +586,7 @@ header {
       border-bottom: 2px solid $input-color;
 
       &:focus {
-        border-bottom: 2px solid #78788c;
+        border-bottom: 2px solid $a-color;
       }
     }
   }
@@ -603,23 +603,23 @@ header {
     transition: all 0.3s;
 
     &:hover {
-      background: #78788c;
-      color: #fff;
+      background: $bg-nav-hover;
+      color: $a-color-hover;
     }
   }
 
   div {
     content: "Hi";
     position: absolute;
-    bottom: -15px;
-    right: -20px;
-    background: #50505a;
-    color: #fff;
+    bottom: -2rem;
+    right: -40px;
+    background: $bg-nav-hover;
+    color: $h1-font-color-light;
     width: 320px;
     padding: 16px 4px 16px 0;
     border-radius: 6px;
     font-size: 13px;
-    box-shadow: 10px 10px 40px -14px #000;
+    box-shadow: 10px 10px 40px -14px #592f13;
 
     span {
       margin: 0 5px 0 15px;
@@ -672,29 +672,4 @@ header {
 }
 
 
-@media only screen and (max-width: 960px) {
-  .case-study {
-    padding: 2rem 0;
-    margin: 0 0 0 3rem ;
-    grid-template-columns: repeat(auto-fit, minmax(2fr , 1fr));
 
-    .description {
-      float: none;
-      margin-left: 0;
-      width: 96%;
-
-      &:last-of-type {
-        margin-bottom: 3rem;
-      }
-
-      p{
-        font-size: 1rem;
-      }
-
-      img{
-        height: 300px;
-        object-fit:cover;
-      }
-    }
-  }  
-}
