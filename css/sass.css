@@ -27,15 +27,15 @@ p {
 
 /* ================= body style =================*/
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #432818;
   margin: 5px 0 20px 0;
   font-weight: bolder;
 }
 
 h2 {
-  font-size: 1.75rem;
-  color: #714429;
+  font-size: 2rem;
+  color: #31190a;
   margin: 5px 0 20px 0;
 }
 
@@ -47,7 +47,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
-  color: #e1a97c;
+  color: #cea888;
   margin: 5px 0 20px 0;
   letter-spacing: 2px;
 }
@@ -254,13 +254,6 @@ header .btn:hover {
   transform: translateY(0%);
 }
 
-.cards {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1rem;
-}
-
 .about-me {
   padding: 80px 0;
   transition: transform 0.5s ease-in-out;
@@ -310,7 +303,7 @@ header .btn:hover {
 }
 .about-me .container .grid .grid-item h4 {
   margin: 0 0 0.5rem 0;
-  color: #714429;
+  color: #31190a;
   font-weight: 600;
 }
 .about-me .container .grid .grid-item p {
@@ -459,7 +452,7 @@ header .btn:hover {
 .form {
   width: 340px;
   height: 75vh;
-  background: #e6e6e6;
+  background: #e4cfaf;
   border-radius: 8px;
   box-shadow: 0 0 40px -10px #000;
   margin: calc(50vh - 220px) auto;
@@ -473,8 +466,7 @@ header .btn:hover {
   margin: 10px 0;
   padding-bottom: 10px;
   width: 180px;
-  color: #78788c;
-  border-bottom: 3px solid #78788c;
+  border-bottom: 3px solid #774318;
 }
 .form p {
   padding: 0;
@@ -484,7 +476,7 @@ header .btn:hover {
   display: block;
   margin: 28px 0 0;
   font-size: 14px;
-  color: #5a5a5a;
+  color: #1F140D;
 }
 .form p input {
   width: 100%;
@@ -496,7 +488,7 @@ header .btn:hover {
   border: 0;
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s;
-  border-bottom: 2px solid #bebed2;
+  border-bottom: 2px solid #7e5b3d;
 }
 .form p input:focus {
   border-bottom: 2px solid #78788c;
@@ -506,9 +498,9 @@ header .btn:hover {
   padding: 8px 12px;
   margin: 8px 0 0;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #78788c;
+  border: 2px solid #432818;
   background: 0;
-  color: #5a5a6e;
+  color: #31190a;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -533,6 +525,63 @@ header .btn:hover {
   margin: 0 5px 0 15px;
 }
 
+.case-study {
+  margin: 0 5rem 0 10rem;
+  padding: 4rem 0;
+  width: auto;
+  max-width: 80%;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.case-study .description p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+.case-study .description h1 {
+  text-align: center;
+}
+.case-study .description h4 {
+  color: #542804;
+  margin-bottom: 1rem;
+}
+.case-study .description ul {
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.case-study .description img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .case-study {
+    padding: 2rem 0;
+    margin: 0 0 0 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(2fr, 1fr));
+  }
+  .case-study .description {
+    float: none;
+    margin-left: 0;
+    width: 96%;
+  }
+  .case-study .description:last-of-type {
+    margin-bottom: 3rem;
+  }
+  .case-study .description p {
+    font-size: 1rem;
+  }
+  .case-study .description img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .site-footer {
   background-color: #311a06;
   height: auto;
@@ -542,6 +591,7 @@ header .btn:hover {
   margin-top: 50px;
   margin-bottom: 0px;
   width: 100%;
+  position: relative;
 }
 .site-footer .row p {
   color: #fbddba;
@@ -554,15 +604,20 @@ header .btn:hover {
 }
 .site-footer .footer-links {
   padding-left: 0;
+  list-style: none;
 }
-.site-footer .footer-links list-style:none li display:block a {
+.site-footer .footer-links li {
+  display: block;
+}
+.site-footer .footer-links li a {
   color: #e0beb0;
 }
-.site-footer .footer-links list-style:none li display:block a:focus, .site-footer .footer-links list-style:none li display:block a:active, .site-footer .footer-links list-style:none li display:block a:hover {
+.site-footer .footer-links li a:focus, .site-footer .footer-links li a:active, .site-footer .footer-links li a:hover {
   color: #905f2e;
 }
 .site-footer .social-icons {
-  text-align: right;
+  display: flex;
+  justify-content: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;

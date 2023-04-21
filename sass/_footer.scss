@@ -9,6 +9,7 @@
     margin-top:50px;
     margin-bottom: 0px;
     width: 100%;
+    position: relative;
     
         .row{
             p{
@@ -26,10 +27,10 @@
 
             .footer-links{
                 padding-left:0;
-                list-style:none
+                list-style:none;
 
                 li{
-                    display:block
+                    display:block;
 
                     a{
                         color:$a-color-light;
@@ -45,7 +46,8 @@
 
 
             .social-icons{
-                text-align:right;
+                display: flex;
+                justify-content: center;
                 padding-left:0;
                 margin-bottom:0;
                 list-style:none;
